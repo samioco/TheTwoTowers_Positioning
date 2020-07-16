@@ -1,0 +1,10 @@
+#CLASS 0
+RESET_PositioningVariables
+RESET_PositioningGlobal
+RESET_PositioningLogin
+RESET_PositioningMordor
+RESET_PositioningSubZones
+RESET_PositioningPartyWait
+RESET_PositioningQuests
+RESET_PositioningWaterways
+#CLASS 0
