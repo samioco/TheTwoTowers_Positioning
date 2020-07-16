@@ -1,0 +1,33 @@
+#CLASS 0
+$CLASS = "Tools|Positioning|Quests"
+#TR Quester15PortIn {Out of nowhere, an arrow sails through the air, striking one of the} {TE ER15QuestInside} $CLASS
+#TR Quester19PortIn {Without further delay, Na'man disappears inside of it, leaving you} {TE ER19QuestInside} $CLASS
+
+#TR MirkwoodTreeStump {the stump. Intrigued by this discovery, you throw away the key and} {TE mirkwood_treestump} $CLASS
+#TR MirkwoodSpiderCocoon {Sensing your weakness, the spider effortlessly pins you down and} {r1;TE spider_cocoon} $CLASS
+#TR SRSLeavesLowAwareness {The leaves reveal nothing of interest.} {#NOMAP;#NODIR;TE SRS_Leaves} $CLASS
+
+#TR MobMumak {You attack Mumak.} {
+#VAR Mumak {%roomnum} {} VAR
+SysMsg Mumak detected at room: %roomname(), RoomNum: %roomnum(), GoMumak: #WALK @Mumak
+} $CLASS
+
+#TR MobPitCreature {You attack Pit creature.} {
+#VAR PitCreature {%roomnum()} {} VAR
+SysMsg Pit Creature stored: %roomname, RoomNum: %roomnum(), GoPit: #WALK @PitCreature
+} $CLASS
+
+#TR MobBeast {You attack Beast.} {
+#IF (!@Wimpy) {wimpy}
+#VAR Harondor_Beast {%roomnum} {} VAR
+SysMsg Beast detected at room: %roomname(), Room#: %roomnum(), GoBeast: #WALK @Harondor_Beast
+} $CLASS
+
+#TR MobDazeIngredients {You attack {"White snake|Warty toad|Black lizard|Large bat|Angry bat"}} {
+QuestOn WallofMordor_Daze
+#VAR DazeMob {%roomnum()} {} VAR
+SysMsg DazeMob: %roomname(), Room#: @DazeMob
+} $CLASS
+
+
+#CLASS 0
