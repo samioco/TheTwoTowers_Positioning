@@ -1,0 +1,86 @@
+#CLASS 0
+#VAR R1 {"Null"} {} VAR
+#VAR R2 {"Null"} {} VAR
+#VAR R1name {"Null"} {} VAR
+#VAR R2name {"Null"} {} VAR
+
+#VAR Messages_NoMap {} {} VAR
+#ADDI Messages_NoMap "You can't go that way!"
+#ADDI Messages_NoMap "The door is locked."
+#ADDI Messages_NoMap "Only members are allowed inside the Guildhall."
+#ADDI Messages_NoMap "The boat must be in the water first!"
+#ADDI Messages_NoMap "You cannot go that way, but perhaps you could land there?"
+#ADDI Messages_NoMap "You cannot move the small boat that way!"
+#ADDI Messages_NoMap "The waters are much too treacherous to navigate."
+#ADDI Messages_NoMap "A HUGE wave comes in and pushes you back closer to shore."
+#ADDI Messages_NoMap "The waters are much too treacherous to navigate in that direction."
+#ADDI Messages_NoMap "The strong current prevents you from moving your boat there."
+
+#VAR Messages_NewChar {} {} VAR
+#ADDI Messages_NewChar %concat("Type """,create,""" to create your character.")
+#ADDI Messages_NewChar "To create a new character we need some information."
+#ADDI Messages_NewChar %concat("To enter Arda, type ""mud"".")
+#ADDI Messages_NewChar "A weathered Ranger enters the room."
+#ADDI Messages_NewChar "The wagon driver points to a sign, waves farewell, and departs."
+#ADDI Messages_NewChar "The driver wishes you luck, gives you a pat on the shoulder, and departs."
+#ADDI Messages_NewChar "You walk away from Ragakh and hop aboard the wagon home."
+#ADDI Messages_NewChar "You walk away from Aradir and hop aboard the wagon home."
+
+
+#VAR Messages_ShelobsLair_BlockedMovement {} {} VAR
+#ADDI Messages_ShelobsLair_BlockedMovement "Shelob must be messing with your mind. The darkness seems"
+#ADDI Messages_ShelobsLair_BlockedMovement "You seem to get nowhere as you welcome and dwell on the delicious"
+#ADDI Messages_ShelobsLair_BlockedMovement "The air seems to be running out in this tunnel. Your muscles refuse to"
+#ADDI Messages_ShelobsLair_BlockedMovement "Doubts and fears assail you, filling you with the desire to just give in."
+#ADDI Messages_ShelobsLair_BlockedMovement "The atmosphere feels like it has turned to cotton wool."
+#ADDI Messages_ShelobsLair_BlockedMovement "Your legs tire as they push through air as thick as treacle."
+#ADDI Messages_ShelobsLair_BlockedMovement "You can't go that way!"
+
+#VAR Messages_MinasTirith_GateBlock {} {} VAR
+#ADDI Messages_MinasTirith_GateBlock "As you near the gate, a guard steps out in front of it."
+#ADDI Messages_MinasTirith_GateBlock "After a moment of thought, his face turns to a frown."
+#ADDI Messages_MinasTirith_GateBlock "If you're going to go through the gate, you'll have to go through"
+
+#VAR Messages_InnRoom_Out {} {} VAR
+#ADDI Messages_InnRoom_Out "Thank you for staying at this inn!"
+#ADDI Messages_InnRoom_Out "Your type is not wanted here!"
+#ADDI Messages_InnRoom_Out "The innkeeper stops you from going up the stairs, studying your face"
+#ADDI Messages_InnRoom_Out "You have not rented space on the floor of the common sleeping room."
+#ADDI Messages_InnRoom_Out "This tent better not be damaged!"
+#ADDI Messages_InnRoom_Out "You haven't rented a room yet."
+#ADDI Messages_InnRoom_Out "The innkeeper cannot see you and ignores you."
+#ADDI Messages_InnRoom_Out "'Weakling!  Get out of my sight!'"
+#ADDI Messages_InnRoom_Out "You must rent a room first."
+#ADDI Messages_InnRoom_Out "the innkeeper if you want a room to sleep in."
+#ADDI Messages_InnRoom_Out "No freebies here, you're going to have to rent a room first."
+#ADDI Messages_InnRoom_Out "You aren't renting anything without enough gold!"
+#ADDI Messages_InnRoom_Out "Rent a room first!"
+
+#VAR Messages_InnRoom_In {} {} VAR
+#ADDI Messages_InnRoom_In "Thank you!  Your room is upstairs."
+#ADDI Messages_InnRoom_In "You already have a room rented here."
+#ADDI Messages_InnRoom_In "You've already have a room rented here."
+#ADDI Messages_InnRoom_In "You already have a tent rented here."
+#ADDI Messages_InnRoom_In "The chubby man takes"
+#ADDI Messages_InnRoom_In "Chubby man says to you: You've already paid to use my communal common"
+#ADDI Messages_InnRoom_In "You are forced to set up the tent all by  yourself."
+#ADDI Messages_InnRoom_In "where you are forced to set up the tent all by yourself."
+#ADDI Messages_InnRoom_In "up the tent on a free patch of grass nearby."
+#ADDI Messages_InnRoom_In "olk' eart toth ashunth"
+#ADDI Messages_InnRoom_In "Thank ye!  Yer room be upstairs."
+#ADDI Messages_InnRoom_In "Ye already haf a room rented 'ere."
+#ADDI Messages_InnRoom_In "Your room is upstairs."
+#ADDI Messages_InnRoom_In "Your lodging is already prepared"
+#ADDI Messages_InnRoom_In "You bribe Sabina with some gold for a sleeping bunk."
+#ADDI Messages_InnRoom_In "Your room is through the door to the west."
+#ADDI Messages_InnRoom_In "Sina thanks you and points towards the west door."
+#ADDI Messages_InnRoom_In "Be blessed.  I have a room for you upstairs."
+#ADDI Messages_InnRoom_In "Your room already awaits my friend."
+#ADDI Messages_InnRoom_In "Thank you. Pick a tent west of here."
+#ADDI Messages_InnRoom_In "You've already rented a tent. Just go to it. It's west of here."
+#ADDI Messages_InnRoom_In "Your room already awaits you."
+#ADDI Messages_InnRoom_In "The proprietor thanks you and directs you up the stairs to your room."
+#ADDI Messages_InnRoom_In "Thanks for the gold, now get out of my sight!"
+#ADDI Messages_InnRoom_In "Voshlor points towards your cave."
+#ADDI Messages_InnRoom_In "You have a cave already."
+#CLASS 0
