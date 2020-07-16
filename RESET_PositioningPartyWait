@@ -1,0 +1,34 @@
+#CLASS 0
+
+$CLASS = "Tools|Positioning|PartyWait"
+#VAR PartyWaitRoom {} {} VAR
+
+#AL PartyWaitEXE {
+$myName=%lower(@MyName)
+$partyLeader=%lower(@PartyLeader)
+$partyMember=%item(@Party,2)
+#IF ((@Party) && ($partyLeader=$myName) && ($partyMember)) {
+  #VAR PartyWaitRoom {%roomname()} {} VAR
+  //#ECHO PartyWait at: @PartyWaitRoom
+  #T+ PartyWaitRoom
+} {#OK}
+} $CLASS
+
+#TR PartyWaitRoom {{@PartyWaitRoom}~(} {
+#T- PartyWaitRoom
+$partyMember=%item(@Party,2)
+#IF (%item(@Party,2)) {
+#ECHO Waiting for Party Member
+#T+ PartyMemberWait
+} {#OK}
+} $CLASS
+#T- PartyWaitRoom
+
+#TR PartyMemberWait {%item(@Party,2)} {
+#ECHO Continuing...
+#T- PartyMemberWait
+#OK
+} $CLASS
+#T- PartyMemberWait
+
+#CLASS 0
