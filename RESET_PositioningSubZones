@@ -1,0 +1,38 @@
+#CLASS 0
+
+$CLASS = "Tools|Positioning|SubZones"
+#TR OsgiliathNoEntry_OsgBridge {Remembering your very recent encounter with the Uruk-hai guard} {TE OsgBridgeW} $CLASS
+#TR OsgiliathNoEntry_EOSG {Are you crazy? You think you're just going to walk up to a} {TE EOSG} $CLASS
+#TR OsgForgeBlock {Varg won't allow you to leave with his tongs, especially not while} {TE OsgForge} $CLASS
+#TR OsgBlankBlock {The guards prevent you from leaving with the sword blank.} {TE OsgBlank} $CLASS
+#TR OsgForgeWorkshopBlock {Uruk-hai guard steps in your way} {TE OsgBlank} $CLASS
+#TR OsgForgeThrowOut {Varg gets upset and throws you out of the room.} {TE OsgBlank} $CLASS
+
+#TR MoriaAbyssFall1 {You walk forward carefully upon the bridge, but strike your foot on} {TE MoriaAbyss} $CLASS
+#TR MoriaAbyssFall2 {strike your foot on a protrusion and tumble from the lattice!} {TE MoriaAbyss} $CLASS
+#TR MoriaAbyssFall3 {You begin to slowly cross the bridge, but in your weakened state} {TE MoriaAbyss} $CLASS
+
+#TR KadarGuardBlock {Guard steps forward and blocks your way!} {TE NKAD} $CLASS
+
+#TR GundabadBoulders {where you began.  There is no getting down from here with this} {TE GundabadBoulders} $CLASS
+
+#TR PantherBlock {You move the bush but find nothing behind.  How disappointing.} {TE Panther} $CLASS
+
+#TR DreybanClimbDownBlock {You need at least one free hand to climb down.  You could probably} {TE DreybanLizard} $CLASS
+#TR DreybanClimbUpBlock {You consider trying to scale the mountain using only your legs, but} {TE DreyCamp} $CLASS
+
+#TR DeepRavineUrushgulBlock1 {Urushgul screams: You deprived me of my prey!  NOBODY gets away with that!} {TE Urushgul} $CLASS
+#TR DeepRavineUrushgulBlock2 {Urushgul prevents you from leaving and attacks with renewed fury!} {TE Urushgul} $CLASS
+
+#TR AsurasartesMeetingSauronShrine {~[ You have completed a quest: Ast Lower: Meeting Sauron ~]} {TE MeetingSauronShrine} $CLASS
+
+#TR ProfWepCharSlam {slam headfirst into a large slab of stone.  You collapse to the ground} {TE ProfWep_Char} $CLASS
+
+#TR SilverFlaskRushes {into something that looked like solid ground but wasn't it.} {TE SilverFlask_Rushes} $CLASS
+
+#TR DimrillValeBlock {As you approach the rocks, their size overwhelms you, making} {
+TE Caktash
+#IF (%trigger(MapMe_Trigger)) {MapStop}
+} $CLASS
+
+#CLASS 0
