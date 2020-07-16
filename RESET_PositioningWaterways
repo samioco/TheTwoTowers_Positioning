@@ -1,0 +1,122 @@
+#CLASS 0
+$CLASS = "Tools|Positioning|Waterways"
+#TR YouSwim {^You swim %1.} {
+#MO %1
+} $CLASS
+
+#TR WaterwaysSwim {You swim} {BotOn Waterways;#ALA "Alarm_waterways" {+2} {BotOff Waterways} Waterways;look} $CLASS
+#TR WaterwaysStopSwim {You stop swimming.} {BotOn Waterways;#ALA "Alarm_waterways" {+2} {BotOff Waterways} Waterways;look} $CLASS
+#TR WaterwaysLaunch {You shove the {"canoe|boat"} into the water.} {BotOn Waterways;#ALA "Alarm_waterways" {+2} {BotOff Waterways} Waterways;look} $CLASS
+#TR WaterwaysLand {You pull the {"canoe|boat} onto shore.} {BotOn Waterways;#ALA "Alarm_waterways" {+2} {BotOff Waterways} Waterways;look} $CLASS
+
+#TR PelargirAnduinOut {{"You swim away from the city of Pelargir.|You move the boat away from the city of Pelargir."}} {
+BotOff Waterways
+#IF (%roomname()="The river Anduin") {TE pelargir_anduin_out
+} {TE pelbridge_river}
+} $CLASS
+
+//#TR Pelargir_Anduin_In {{"You swim towards the city of Pelargir.|You move the boat towards the city of Pelargir."}} {BotOff Waterways;TE pelargir_anduin_in} $CLASS
+
+#T- $CLASS
+
+$CLASS = "Tools|Positioning|Waterways|Settings"
+//PelSP and surrounding land
+#TR {You stand outside the mighty gates of the Port City of Pelargir.} {BotOff Waterways;TE PelSP} $CLASS
+#TR {the bridge, swollen with melted ice from the White Mountains.} {BotOff Waterways;TE pelbridge} $CLASS //PelSP: 1w
+#TR {A bridge over the Anduin is South.} {BotOff Waterways;TE 98529} $CLASS //PelSP: 1e
+#TR {A bridge over the river sits east.} {BotOff Waterways;TE 98431} $CLASS //PelSP: 2w
+#TR {A bridge over the river sits Southeast.} {BotOff Waterways;TE 98441} $CLASS //PelSP: 2w,n
+#TR {A bridge over the river sits Southwest.} {BotOff Waterways;TE 98534} $CLASS //PelSP: 1n
+
+#TR {A bridge over the river sits northeast.} {BotOff Waterways;TE 98430} $CLASS //pelbridge:w,s
+
+//Waterways around Pelargir Outskirts
+#TR {The city of Pelargir is visible to the South.} {BotOff Waterways;TE pelbridge_river} $CLASS //under pelbridge
+#TR {A bridge over the river sits South.} {BotOff Waterways;TE 99083} $CLASS //pelbridge_river: 1n
+#TR {The South Road continues Southeast.} {BotOff Waterways;TE 99082} $CLASS //pelbridge_river: 2n
+
+//Anduin River NE of PelSP
+#TR {You see some tall reeds northeast.} {BotOff Waterways;TE anduinbridge_river} $CLASS //Under the Anduin Bridge
+#TR {You see some tall reeds east.} {BotOff Waterways;TE 98966} $CLASS //anduinbridge_river: ne
+#TR {A bridge over the Anduin is Southwest.} {BotOff Waterways;TE 98966} $CLASS //anduinbridge_river: ne
+#TR {You see some tall reeds South.} {BotOff Waterways;TE 98965} $CLASS //anduinbridge_river: 2ne
+#TR {You see some tall reeds Southwest.} {BotOff Waterways;TE 98965} $CLASS //anduinbridge_river: 2ne,e
+
+
+
+//Harondar plains South of Anduin Bridge
+#TR {A bridge over the Anduin is north.} {BotOff Waterways;TE 24477} $CLASS
+#TR {A bridge over the Anduin is northeast.} {BotOff Waterways;TE 24476} $CLASS
+#TR {The Great River Anduin is north.} {BotOff Waterways;TE 24475} $CLASS
+#TR {A bridge over the Anduin is west.} {BotOff Waterways;TE anduinbridge_e} $CLASS //anduinbridge_e
+#TR {west, with tall reeds lining the side of the river, obstructing your} {BotOff Waterways;TE cou} $CLASS
+#TR {You see some tall reeds west.} {BotOff Waterways;TE 25197} $CLASS
+#TR {You see some tall reeds north.} {BotOff Waterways;TE 25194} $CLASS
+
+#TR {A bridge over the Anduin is east.} {BotOff Waterways;TE 98968} $CLASS //anduinbridge_river: 1w
+#TR {The city of Pelargir is visible to the north.} {BotOff Waterways;TE pelargir_anduin_out} $CLASS //pelargir_anduin_fork
+
+
+
+
+//Pelargir Poor Town Wharf
+#TR {the South, one can see the great expanse of the Harondor Plains.} {BotOff Waterways
+#SW (%roomnum()=29037) {TE 99111
+} (%roomnum()=29038) {TE pelargir_anduin_in
+} (%roomnum()=29039) {TE 99106
+}
+} $CLASS
+
+#TR {A pillaged shack is to the north.} {BotOff Waterways;TE pelpoorin} $CLASS
+#TR {Poortown Wharf leads east.} {BotOff Waterways;TE 29037} $CLASS
+#TR {Poortown Wharf continues west and northeast.} {BotOff Waterways;TE 29039} $CLASS
+#TR {Poortown Wharf continues east and Southwest.} {BotOff Waterways;TE pelargir_crossroads_poortown_thievesrow} $CLASS
+#TR {A narrow alley lies to the north.} {BotOff Waterways;TE trident} $CLASS
+#TR {A hovel is located to the north.} {BotOff Waterways;TE 29042} $CLASS
+#TR {Poortown Wharf continues Southwest.} {BotOff Waterways;TE 29043} $CLASS
+
+
+//Pelargir Garth Ancient Ruins Island
+#TR {Some ancient ruins are to the South.} {BotOff Waterways;TE TheGarth_North} $CLASS
+#TR {Some ancient ruins are to the east.} {BotOff Waterways;TE TheGarth_West} $CLASS
+#TR {Some ancient ruins are to the north.} {BotOff Waterways;TE TheGarth_South} $CLASS
+#TR {Some ancient ruins are to the west.} {BotOff Waterways;TE TheGarth_East} $CLASS
+
+#TR {Newport Wharf continues east and Southwest.} {BotOff Waterways;TE 57974} $CLASS
+#TR {The Old Silent tavern is to the north.} {BotOff Waterways;TE 57987} $CLASS
+#TR {The Miss and Bliss Inn is to the north.} {BotOff Waterways;TE 58004} $CLASS
+#TR {Newport Wharf continues west and Southeast.} {BotOff Waterways;TE 58006} $CLASS
+#TR {Newport Wharf continues South and east.} {BotOff Waterways;TE 58012} $CLASS
+#TR {Newport Wharf continues north and South.} {BotOff Waterways;TE 58014} $CLASS
+#TR {Wild Rose Blossom Lane leads northwest.} {BotOff Waterways;TE 58015} $CLASS
+#TR {Noble's Promenade leads Southwest.} {BotOff Waterways;TE 58017} $CLASS
+#TR {Belfalas Wharf continues north and South.} {BotOff Waterways;TE 58018} $CLASS
+#TR {Belfalas Wharf continues north and east.} {BotOff Waterways;TE 58019} $CLASS
+#TR {Belfalas Wharf continues west and northeast.} {BotOff Waterways;TE 58235} $CLASS
+#TR {A pillaged warehouse stands to the South.} {BotOff Waterways;TE 58234} $CLASS
+#TR {The Pelargir Admiralty building is to the South.} {BotOff Waterways;TE 58233} $CLASS
+#TR {Belfalas Wharf continues east and northwest.} {BotOff Waterways;TE 58055} $CLASS
+#TR {King's Wharf continues east and northeast.} {BotOff Waterways;TE 58049} $CLASS
+#TR {King's Wharf continues northwest and Southwest.} {BotOff Waterways;TE 58036} $CLASS
+#TR {King's Wharf continues east and Southeast.} {BotOff Waterways;TE 57986} $CLASS
+#TR {Belfalas Wharf continues west.} {BotOff Waterways;TE 58569} $CLASS
+
+#TR {The King's Bridge gate is to the north.} {BotOff Waterways;TE 577966} $CLASS
+#TR {You are in a square inside the wall surrounding the Pelargir noble} {BotOff Waterways;TE 57965} $CLASS
+#TR {You are atop the King's Bridge, a narrow causeway connecting the} {BotOff Waterways;TE 74973} $CLASS
+#TR {This is the eastern end of the King's Bridge.  The narrow causeway} {BotOff Waterways;TE 29031} $CLASS
+
+#TR {This small island in the middle of the Garth is the very center of} {BotOff Waterways;TE pelargir_island} $CLASS
+
+//Pelargir Bridge Road Wharf
+#TR {Bridge Road Wharf continues east.} {BotOff Waterways;TE bridgeroadwharf_end} $CLASS
+#TR {A boat-maker's shop is to the north.} {BotOff Waterways;TE 28938} $CLASS
+#TR {A gloomy mansion is located north.} {BotOff Waterways;TE pelmansion} $CLASS
+#TR {Bridge Road Wharf continues northwest and Southeast.} {BotOff Waterways;TE 28918} $CLASS
+#TR {A two-story apartment house sits to the north.} {BotOff Waterways;TE 28917} $CLASS
+#TR {The river Sirith~(e~)} {BotOff Waterways;#IF (%roomid()="bridgeroadwharf_end") {TE 98527}} $CLASS
+#TR {The river Sirith~(n~)} {BotOff Waterways;#IF (%roomid()="bridgeroadwharf_end") {TE 99088}} $CLASS
+
+BotOff $CLASS
+#T- $CLASS
+#CLASS 0
