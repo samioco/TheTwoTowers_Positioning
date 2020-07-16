@@ -1,0 +1,106 @@
+#CLASS 0
+$CLASS = "Tools|Positioning|Global"
+
+#TR NoMap {{@Messages_NoMap}} {#NOMAP;#NODIR} $CLASS
+
+#TR YouFollow {^You follow {"your leader|the tracks|%w"} %1.} {
+#IF (%1="to the caravan") {#MO "join a caravan"}
+#IF (@FollowBot) {FollowConditions %1}
+#MOVE %1
+} $CLASS
+
+#TR YouAreCarried {^You are carried %1 by %w's {@Mounts}.} {
+#MO %1
+} $CLASS
+
+#TR Wimpy {^You run %1.} {
+#MO %1
+} $CLASS
+
+
+#TR HighPassFall {Due to your lack of coordination, you have lost your footing and} {
+TE HighPassFall
+#IF (%trigger(MapMe_trigger)) {MapStop}
+} $CLASS
+
+#TR HighPass_Block_TooYoung {You are much too young to venture there.  Seek help in the West instead.} {
+TE HighPass_TooYoung
+#IF (%trigger(MapMe_trigger)) {MapStop}
+} $CLASS
+
+#TR HighPassBlockEvils {You stare up the pass and notice several elven archers in} {TE HighPass} $CLASS
+
+#TR RedhornBlockBuried {You try to climb the hill,} {
+TE Redhorn_Buried
+#IF (%trigger(MapMe_trigger)) {MapStop}
+dig
+} $CLASS
+#TR RedhornBuriedDig1 {You can't breath beneath all this snow.} {dig} $CLASS
+#TR RedhornBuriedDig2 {You seem to make some progress.  Perhaps you should dig some more.} {dig} $CLASS
+#TR RedhornDigOut {You pull yourself out the reset of the way.} {TE Redhorn_Sign} $CLASS
+#TR RedhornBlockEvils {Redhorn Pass is too cold for you to cross!} {#IF (%trigger(MapMe_trigger)) {MapStop};TE OrcishBrew} $CLASS
+
+
+#TR InnRoomOut {@Messages_InnRoom_Out} {
+#MO D
+$inn=""
+#SW (%pos(%roomid(),@ROOMS_Inns_ID)) {
+  $inn=%roomid()
+  #VAR %concat("ROOMS_Inns_",$inn) {} {} VAR
+} (%pos(%roomid(),@ROOMS_InnKeepers_ID)) {
+  $inn=@{%concat("ROOMS_InnkeepersInns_",%roomid())}
+  #VAR %concat("ROOMS_Inns_",$inn) {} {} VAR
+}
+} $CLASS
+
+#TR InnRoomIn {@Messages_InnRoom_In} {
+$inn=""
+#SW (%pos(%roomid(),@ROOMS_Inns_ID)) {
+  $inn=%roomid()
+  #VAR %concat("ROOMS_Inns_",$inn) {1} {} VAR
+} (%pos(%roomid(),@ROOMS_InnKeepers_ID)) {
+  $inn=@{%concat("ROOMS_InnkeepersInns_",%roomid())}
+  #VAR %concat("ROOMS_Inns_",$inn) {1} {} VAR
+}} $CLASS
+
+#TR YouVisitInn {You visit %1.} {#MO U} $CLASS
+#TR InnKickOut {Thank you for staying at this inn!  Hope you enjoyed your stay.} {#MO D} $CLASS
+
+#TR EntBlockTooYoung {Ent says*: Go west and north, young one. The East is too dangerous now!} {
+TE EntW
+#IF (%trigger(MapMe_trigger)) {MapStop}
+} $CLASS
+
+#TR EntBlockEvils {The Ents guarding that area would hunt you down in no time!} {
+TE EntE
+#IF (%trigger(MapMe_trigger)) {MapStop}
+} $CLASS
+
+#TR TheVoidValleyoftheDead {The Valley of the Dead~(pass~)} {TE TheVoid_ValleyOfTheDead} $CLASS
+#TR TheVoidMandos {^Meeting with Mandos.} {TE MeetingWithMandos} $CLASS
+#TR TheVoidTapestry_TeleriNoldor {Tapestry of the War of the Teleri and the Noldor} {TE TheVoidTapestry_TeleriNoldor} $CLASS
+#TR TheVoidTapestryFeanor {Tapestry of Feanor and his Days of Glory} {TE TheVoidTapestryFeanor} $CLASS
+#TR TheVoidTapestryEru {Tapestry of the First Born of Eru} {TE TheVoidTapestryEru} $CLASS
+#TR TheVoid {^The Void} {TE TheVoid} $CLASS
+#TR TheVoidRevive {You return from the dead.} {#WAIT 1000;#FIND} $CLASS
+
+#TR Positioning_Event {^The Entrance to the Event~(} {TE EventIn} $CLASS
+
+#TR NewCharacterCreation {^{@Messages_NewChar}} {
+TE NewCharacterCreation
+#T+ Positioning_Login
+#CALL %maplocked(1)
+} $CLASS
+
+#TR PositioningNewCharStart {^To enter Arda, type "mud".} {
+mud
+skiptutorial
+} $CLASS
+
+
+#TR FarHaradMountainPassMountainLion {Suddenly, you feel a great weight on your shoulders.  The lion has pounced!} {
+TE FarHaradMountainPass
+} $CLASS
+
+
+#CLASS 0
