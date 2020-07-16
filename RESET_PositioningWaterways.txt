@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningWaterways#CLASS 0#AL RESET_PositioningWaterways {#CLASS 0
 $CLASS = "Tools|Positioning|Waterways"
 #TR YouSwim {^You swim %1.} {
 #MO %1
@@ -13,7 +13,7 @@ $CLASS = "Tools|Positioning|Waterways"
 BotOff Waterways
 #IF (%roomname()="The river Anduin") {TE pelargir_anduin_out
 } {TE pelbridge_river}
-} $CLASS
+} $CLASS 
 
 //#TR Pelargir_Anduin_In {{"You swim towards the city of Pelargir.|You move the boat towards the city of Pelargir."}} {BotOff Waterways;TE pelargir_anduin_in} $CLASS
 
@@ -96,12 +96,12 @@ $CLASS = "Tools|Positioning|Waterways|Settings"
 #TR {A pillaged warehouse stands to the South.} {BotOff Waterways;TE 58234} $CLASS
 #TR {The Pelargir Admiralty building is to the South.} {BotOff Waterways;TE 58233} $CLASS
 #TR {Belfalas Wharf continues east and northwest.} {BotOff Waterways;TE 58055} $CLASS
-#TR {King's Wharf continues east and northeast.} {BotOff Waterways;TE 58049} $CLASS
-#TR {King's Wharf continues northwest and Southwest.} {BotOff Waterways;TE 58036} $CLASS
-#TR {King's Wharf continues east and Southeast.} {BotOff Waterways;TE 57986} $CLASS
-#TR {Belfalas Wharf continues west.} {BotOff Waterways;TE 58569} $CLASS
+#TR {King's Wharf continues east and northeast.} {BotOff Waterways;TE 58049} $CLASS 
+#TR {King's Wharf continues northwest and Southwest.} {BotOff Waterways;TE 58036} $CLASS 
+#TR {King's Wharf continues east and Southeast.} {BotOff Waterways;TE 57986} $CLASS 
+#TR {Belfalas Wharf continues west.} {BotOff Waterways;TE 58569} $CLASS 
 
-#TR {The King's Bridge gate is to the north.} {BotOff Waterways;TE 577966} $CLASS
+#TR {The King's Bridge gate is to the north.} {BotOff Waterways;TE 577966} $CLASS 
 #TR {You are in a square inside the wall surrounding the Pelargir noble} {BotOff Waterways;TE 57965} $CLASS
 #TR {You are atop the King's Bridge, a narrow causeway connecting the} {BotOff Waterways;TE 74973} $CLASS
 #TR {This is the eastern end of the King's Bridge.  The narrow causeway} {BotOff Waterways;TE 29031} $CLASS
@@ -119,4 +119,4 @@ $CLASS = "Tools|Positioning|Waterways|Settings"
 
 BotOff $CLASS
 #T- $CLASS
-#CLASS 0
+#CLASS 0} _Positioning#CLASS 0

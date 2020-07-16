@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningSubZones#CLASS 0#AL RESET_PositioningSubZones {#CLASS 0
 
 $CLASS = "Tools|Positioning|SubZones"
 #TR OsgiliathNoEntry_OsgBridge {Remembering your very recent encounter with the Uruk-hai guard} {TE OsgBridgeW} $CLASS
@@ -32,7 +32,8 @@ $CLASS = "Tools|Positioning|SubZones"
 
 #TR DimrillValeBlock {As you approach the rocks, their size overwhelms you, making} {
 TE Caktash
-#IF (%trigger(MapMe_Trigger)) {MapStop}
+#IF (%trigger(MapMe_trigger)) {MapStop}
 } $CLASS
 
 #CLASS 0
+} _Positioning#CLASS 0

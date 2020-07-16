@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningGlobal#CLASS 0#AL RESET_PositioningGlobal {#CLASS 0
 $CLASS = "Tools|Positioning|Global"
 
 #TR NoMap {{@Messages_NoMap}} {#NOMAP;#NODIR} $CLASS
@@ -76,13 +76,13 @@ TE EntE
 #IF (%trigger(MapMe_trigger)) {MapStop}
 } $CLASS
 
-#TR TheVoidValleyoftheDead {The Valley of the Dead~(pass~)} {TE TheVoid_ValleyOfTheDead} $CLASS
-#TR TheVoidMandos {^Meeting with Mandos.} {TE MeetingWithMandos} $CLASS
-#TR TheVoidTapestry_TeleriNoldor {Tapestry of the War of the Teleri and the Noldor} {TE TheVoidTapestry_TeleriNoldor} $CLASS
-#TR TheVoidTapestryFeanor {Tapestry of Feanor and his Days of Glory} {TE TheVoidTapestryFeanor} $CLASS
-#TR TheVoidTapestryEru {Tapestry of the First Born of Eru} {TE TheVoidTapestryEru} $CLASS
-#TR TheVoid {^The Void} {TE TheVoid} $CLASS
-#TR TheVoidRevive {You return from the dead.} {#WAIT 1000;#FIND} $CLASS
+#TR TheVoidValleyoftheDead {The Valley of the Dead~(pass~)} {TE TheVoid_ValleyOfTheDead} $CLASS 
+#TR TheVoidMandos {^Meeting with Mandos.} {TE MeetingWithMandos} $CLASS 
+#TR TheVoidTapestry_TeleriNoldor {Tapestry of the War of the Teleri and the Noldor} {TE TheVoidTapestry_TeleriNoldor} $CLASS 
+#TR TheVoidTapestryFeanor {Tapestry of Feanor and his Days of Glory} {TE TheVoidTapestryFeanor} $CLASS 
+#TR TheVoidTapestryEru {Tapestry of the First Born of Eru} {TE TheVoidTapestryEru} $CLASS 
+#TR TheVoid {^The Void} {TE TheVoid} $CLASS 
+#TR TheVoidRevive {You return from the dead.} {#WAIT 1000;#FIND} $CLASS 
 
 #TR Positioning_Event {^The Entrance to the Event~(} {TE EventIn} $CLASS
 
@@ -104,3 +104,4 @@ TE FarHaradMountainPass
 
 
 #CLASS 0
+} _Positioning#CLASS 0

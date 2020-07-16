@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningLogin#CLASS 0#AL RESET_PositioningLogin {#CLASS 0
 $CLASS = "Tools|Positioning|Login"
 #EV onConnect {
 #CALL %maplocked(1)
@@ -35,3 +35,4 @@ INFO Class MXPEnabled disabled.
 #MO D
 } $CLASS
 #CLASS 0
+} _Positioning#CLASS 0

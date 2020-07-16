@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningVariables#CLASS 0#AL RESET_PositioningVariables {#CLASS 0
 #VAR R1 {"Null"} {} VAR
 #VAR R2 {"Null"} {} VAR
 #VAR R1name {"Null"} {} VAR
@@ -83,4 +83,4 @@
 #ADDI Messages_InnRoom_In "Thanks for the gold, now get out of my sight!"
 #ADDI Messages_InnRoom_In "Voshlor points towards your cave."
 #ADDI Messages_InnRoom_In "You have a cave already."
-#CLASS 0
+#CLASS 0} _Positioning#CLASS 0

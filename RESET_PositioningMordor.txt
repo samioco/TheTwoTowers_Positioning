@@ -1,4 +1,4 @@
-#CLASS 0
+//RESET_PositioningMordor#CLASS 0#AL RESET_PositioningMordor {#CLASS 0
 $CLASS = "Tools|Positioning|Mordor"
 #TR MordorPasswordFromLeahpar {'%1'... but I must go now!} {
 #CW yellow,high
@@ -27,4 +27,4 @@ $CLASS = "Tools|Positioning|Mordor"
 #TR ShelobGhostTeleport {You find yourself whisked away to the west...} {TE CUStairs_Steep_Bot} $CLASS
 #TR CUStairsBlock {stairs. Thankful that your instincts took over before you headed towards} {TE CUStairs_Steep_Bottom} $CLASS
 
-#CLASS 0
+#CLASS 0} _Positioning#CLASS 0

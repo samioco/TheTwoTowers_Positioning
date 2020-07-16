@@ -1,13 +1,13 @@
-#CLASS 0
+//RESET_PositioningPartyWait#CLASS 0#AL RESET_PositioningPartyWait {#CLASS 0
 
 $CLASS = "Tools|Positioning|PartyWait"
 #VAR PartyWaitRoom {} {} VAR
 
 #AL PartyWaitEXE {
-$myName=%lower(@MyName)
-$partyLeader=%lower(@PartyLeader)
+$MyName=%lower(@MyName)
+$PartyLeader=%lower(@PartyLeader)
 $partyMember=%item(@Party,2)
-#IF ((@Party) && ($partyLeader=$myName) && ($partyMember)) {
+#IF ((@Party) && ($PartyLeader=$MyName) && ($partyMember)) {
   #VAR PartyWaitRoom {%roomname()} {} VAR
   //#ECHO PartyWait at: @PartyWaitRoom
   #T+ PartyWaitRoom
@@ -31,4 +31,4 @@ $partyMember=%item(@Party,2)
 } $CLASS
 #T- PartyMemberWait
 
-#CLASS 0
+#CLASS 0} _Positioning#CLASS 0

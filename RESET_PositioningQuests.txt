@@ -1,6 +1,6 @@
-#CLASS 0
+//RESET_PositioningQuests#CLASS 0#AL RESET_PositioningQuests {#CLASS 0
 $CLASS = "Tools|Positioning|Quests"
-#TR Quester15PortIn {Out of nowhere, an arrow sails through the air, striking one of the} {TE ER15QuestInside} $CLASS
+#TR Quester15PortIn {Out of nowhere, an arrow sails through the air, striking one of the} {TE ER15QuestInside} $CLASS 
 #TR Quester19PortIn {Without further delay, Na'man disappears inside of it, leaving you} {TE ER19QuestInside} $CLASS
 
 #TR MirkwoodTreeStump {the stump. Intrigued by this discovery, you throw away the key and} {TE mirkwood_treestump} $CLASS
@@ -30,4 +30,4 @@ SysMsg DazeMob: %roomname(), Room#: @DazeMob
 } $CLASS
 
 
-#CLASS 0
+#CLASS 0} _Positioning#CLASS 0
