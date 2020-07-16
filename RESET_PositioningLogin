@@ -1,0 +1,37 @@
+#CLASS 0
+$CLASS = "Tools|Positioning|Login"
+#EV onConnect {
+#CALL %maplocked(1)
+RESET_Gear
+#T+ LoginPositioning
+} $CLASS
+
+#TR LoginPositioning {^({@ROOMS_Login})~((*)~)} {
+#T- LoginPositioning
+$room=%1
+$exits=%2
+$roomid=""
+#FORALL @ROOMS_Login_LookupID {
+  #IF (%item(%i,1)=$room) {$roomid=%item(%i,2)
+  #BREAK
+  }
+}
+TE $roomid
+} $CLASS
+#T- LoginPositioning
+
+#TR PositioningRaceRoomTeleport {before chancing upon a quiet place to grieve.} {
+#CALL %maplocked(1)
+#T+ LoginPositioning
+} $CLASS
+
+#TR MXPEnabled {^MXP enabled.} {
+#T- MXPEnabled
+INFO Class MXPEnabled disabled.
+} $CLASS
+
+#TR Positioning_Sleep {You curl up and drift off to sleep.} {
+#CALL %maplocked(1)
+#MO D
+} $CLASS
+#CLASS 0
