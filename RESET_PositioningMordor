@@ -1,0 +1,30 @@
+#CLASS 0
+$CLASS = "Tools|Positioning|Mordor"
+#TR MordorPasswordFromLeahpar {'%1'... but I must go now!} {
+#CW yellow,high
+#VAR MordorPW {%1} {} VAR
+#ECHO MordorPassword: @MordorPW
+} $CLASS
+
+
+#TR MordorGatesKnock {Mordor gates are guarded MUCH better than they have been in the past.} {#IF (%lower(@MyFaction)=%lower("FR")) {#STOP} {#OK}} $CLASS
+#TR MordorGatesEntry {You decide that it's too late to return and enter the gate...} {#IF (%lower(@MyFaction)=%lower("FR")) {#STOP} {#OK}} $CLASS
+#TR MordorExit {As you walk through the gates, you feel rather than see eyes watching you.} {#OK} $CLASS
+
+
+#TR MinasMorgulWreckage {Fear overwhelms you as you approach the wreckage.  You can not} {#STOP;TE WreckOut} $CLASS
+#TR MinasMorgulBlock {is not dark enough, and you have no place in the land of the Witch King.} {#STOP;TE MinasMorgulGate} $CLASS
+
+#TR BaraddurBridge {The guard firmly places his hand on your chest and growls slightly} {#STOP;TE BDBridge} $CLASS
+#TR BaraddurWallGate {The orc guards stand in your way, hands on weapons.} {#STOP;TE BDWallGate} $CLASS
+#TR BaraddurTowerBlockEscape {The gate won't budge.  You suspect magical influence.} {#STOP;#CW high,blink,red;TE BDRamp;do e,n,nw} $CLASS
+#TR BaraddurFLSCamp {The soldier shouts: You will never leave this camp alive!} {TE FLSCenter} $CLASS
+#TR BaraddurBlockHighAlign {The gate won't budge.  You suspect magical influence.} {do e,n,nw;te BD1Ramp;#ECHO %ansi(high,bold,red)DISGUISE ALIGN DEMONIC DUMMY!} $CLASS
+#TR BaraddurBD2 {The guard won't let a young one like yourself, past.} {#NOMAP;#NODIR;TE BD2} $CLASS
+
+#TR ShelobBlock {{@Messages_ShelobsLair_BlockedMovement}} {#NOMAP;#NODIR} $CLASS
+#TR ShelobNestArrival {You hit the ground with a CRACK!} {TE ShelobNest} $CLASS
+#TR ShelobGhostTeleport {You find yourself whisked away to the west...} {TE CUStairs_Steep_Bot} $CLASS
+#TR CUStairsBlock {stairs. Thankful that your instincts took over before you headed towards} {TE CUStairs_Steep_Bottom} $CLASS
+
+#CLASS 0
